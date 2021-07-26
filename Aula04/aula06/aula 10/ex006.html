@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#arena {
+            font: normal 20pt arial;
+            background: cadetblue;
+            color: rgb(27, 3, 3);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="arena">
+        interaja...
+    </div>
+    <script>
+        var arena = window.document.getElementById('arena');
+        arena.addEventListener('click', clicar);
+        arena.addEventListener('mouseenter', entrar);
+        arena.addEventListener('mouseout', saiu);
+
+        function clicar() {
+            arena.innerText = 'clicou';
+            arena.style.background = 'red'
+        }
+
+        function entrar() {
+            arena.innerText = 'entrou';
+        }
+
+        function saiu() {
+            arena.innerText = 'saiu';
+            arena.style.background = 'green'
+        }
+    </script>
+</body>
+
+</html>
